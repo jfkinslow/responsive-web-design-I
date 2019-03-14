@@ -126,7 +126,7 @@ header nav {
     }
 }
 
-@media (max-width: 515px) {
+@media (max-width: 570px) {
     header nav {
         flex-direction: column;
     }
@@ -255,6 +255,12 @@ header .logo {
     display: flex;
 }
 
+@media (max-width: 515px) {
+    .main-content .bottom-content {
+        flex-direction: column;
+    }
+}
+
 .bottom-border-1px {
     border-bottom: 1px solid black
 }
@@ -264,6 +270,13 @@ header .logo {
     margin: 20px 5%;
     /*display: inline-block;*/
     /*display: flex;*/
+}
+
+@media (max-width: 515px) {
+    .main-content .bottom-content .text-content {
+        width: 98%;
+        margin: 10px 1%;
+    }
 }
 
 .main-content .bottom-content .text-content:last-child {
