@@ -65,6 +65,9 @@ body {
     background: white;
 }
 
+img {
+    width: 100%;
+}
 h1, h2, h3, h4, h5 {
     font-family: 'Bangers', cursive;
     letter-spacing: 1px;
@@ -72,15 +75,25 @@ h1, h2, h3, h4, h5 {
 }
 
 .container {
-    width: 880px;
+    max-width: 880px;
     /* TB LR */
-    font-size: 1.6rem;
+    font-size: 16px;
     margin: 0 auto;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 835px) {
     .container {
-        width: 100%;
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 500px) {
+    .container {
+        max-width: 450px;
+        min-width: 360px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -93,7 +106,7 @@ h1, h2, h3, h4, h5 {
     padding-left: 20px;
 }
 
-@media (max-width: 815px) {
+@media (max-width: 835px) {
     .main-header {
         flex-direction: column;
         padding-left: 0;
@@ -106,15 +119,17 @@ header nav {
     justify-content: flex-end;
 }
 
-@media (max-width: 815px) {
+@media (max-width: 835px) {
     header nav {
         order: 1;
         justify-content: space-between;
     }
 }
 
-@media (max-width: 500px) {
-    
+@media (max-width: 515px) {
+    header nav {
+        flex-direction: column;
+    }
 }
 
 header nav a {
@@ -126,10 +141,12 @@ header nav a {
     text-decoration: none;
 }
 
-header nav a:hover {
-    text-decoration: none;
-    background:gray;
-    color:white;
+@media (min-width: 835px){
+    header nav a:hover {
+        text-decoration: none;
+        background:gray;
+        color:white;
+    }
 }
 
 header nav a:first-child {
@@ -146,15 +163,22 @@ header .logo {
     /*margin-top: 1px;*/
 }
 
-@media (max-width: 768px) {
+@media (max-width: 835px) {
     header .logo {
-        margin-top: 20px;
+        margin: 0;
+        padding: 10px 0 10px;
     }
 }
 
 /* cta */
 .cta{
     display: flex;
+}
+
+@media (max-width: 835px) {
+    .cta {
+        justify-content: center;
+    }
 }
 
 .cta .cta-text {
@@ -184,7 +208,7 @@ header .logo {
     margin-top: 69px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 780px) {
     .cta img {
         display: none;
     }
@@ -201,11 +225,24 @@ header .logo {
     display: flex;
 }
 
+@media (max-width: 515px) {
+    .main-content .top-content {
+        flex-direction: column;
+    }
+}
+
 .main-content .top-content .text-content {
     width: 45%;
     margin: 20px 5%;
     /*display: flex;*/
     /*display: inline-block;*/
+}
+
+@media (max-width: 515px) {
+    .main-content .top-content .text-content {
+        width: 98%;
+        margin: 20px 1%;
+    }
 }
 
 .main-content .middle-img {
